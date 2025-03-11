@@ -9,6 +9,8 @@ from msv4_schema.schema.bases import (
 from msv4_schema.schema.typing import Attr, Coord, Coordof, Data, Dataof, Name
 import numpy
 
+MSV4_SCHEMA_VERSION = "4.0.-9988"
+
 # Dimensions
 Time = Literal["time"]
 """ Observation time dimension """
