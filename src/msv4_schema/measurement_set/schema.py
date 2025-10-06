@@ -9,7 +9,7 @@ from msv4_schema.schema.bases import (
 from msv4_schema.schema.typing import Attr, Coord, Coordof, Data, Dataof
 import numpy
 
-MSV4_SCHEMA_VERSION = "4.0.-9986"
+MSV4_SCHEMA_VERSION = "4.0.0"
 
 # Dimensions
 Time = Literal["time"]
