@@ -1,0 +1,42 @@
+[project]
+name = "msv4-schema"
+version = "4.0.0"
+description = "Measurement Set v4 Schemas, forked from xradio"
+readme = "README.rst"
+requires-python = ">= 3.11"
+license = {file = "LICENSE.txt"}
+authors = [
+    {name = "Jan-Willem Steeb", email="jsteeb@nrao.edu"},
+    {name = "Federico Montesino Pouzols", email="pouzols@eso.edu"},
+    {name = "Dave Mehringer", email="dmehring@nrao.edu"},
+    {name = "Peter Wortmann", email="peter.wortmann@skao.int"},
+    {name = "Simon Perkins", email="sperkins@sarao.ac.za"}
+]
+dependencies = [
+  "typeguard",
+  "xarray"
+]
+
+[project.optional-dependencies]
+testing = [
+  "pytest>=8.0.0",
+  "dask"
+]
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+    "--strict-markers"
+]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[project.urls]
+Homepage = "https://github.com/ratt-ru/msv4-schema"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/msv4_schema"]
